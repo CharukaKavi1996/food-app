@@ -3,6 +3,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:food_app/screens/splash_screen/getting_started.dart';
 import 'package:food_app/utilities/constants.dart';
+import 'package:food_app/utilities/util_functions.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -16,7 +17,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState(){
     super.initState();
     Future.delayed(Duration(seconds: 5),(){
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const GettingStarted()));
+      // Navigator.push(context, MaterialPageRoute(builder: (context) => const GettingStarted()));
+      UtilFunctions.navigation(GettingStarted(), context);
     });
   }
 
